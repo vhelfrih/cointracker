@@ -1,0 +1,30 @@
+.header_container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header{
+  letter-spacing: .25rem;
+  /* text-align: center; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  margin: 12px auto;
+  padding: 1rem;
+  font-size: 1.6rem;
+  color: white;
+  font-weight: 600;
+}
+
+.input{
+  width: 240px;
+  height: 32px;
+  font-size: 14px;
+  padding-left: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 0 3pt 2pt white;
+  color: #e2e2e2;
+  background-color: transparent;
+}
