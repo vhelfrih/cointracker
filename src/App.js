@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 
 import Coin from "./components/Coin";
 import Header from "./components/Header";
+import Sort from "./components/Sort";
 
 function App() {
   const [coins, setCoins] = useState([]);
@@ -30,6 +31,7 @@ function App() {
   return (
     <div className="App">
       <Header inputChange={inputChangeHandler} />
+      <Sort />
       <div className="coins_wrapper">
         {filteredCoins.map((coin) => {
           return (

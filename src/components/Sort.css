@@ -1,0 +1,28 @@
+.button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button{
+  width: 120px;
+  height: 32px;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 2rem;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 0 3pt 2pt white;
+  color: #e2e2e2;
+  background-color: transparent;
+}
+
+.asc{
+  box-shadow: 0 0 3pt 2pt green;
+}
+
+.desc{
+  box-shadow: 0 0 3pt 2pt red;
+}
