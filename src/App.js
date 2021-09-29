@@ -10,7 +10,6 @@ function App() {
   const [searchInput, setSearchInput] = useState("");
 
   const inputChangeHandler = (e) => {
-    e.preventDefault();
     setSearchInput(e.target.value);
   };
 
@@ -28,10 +27,21 @@ function App() {
       .then((responseData) => setCoins(responseData));
   }, []);
 
+  
+   const ascHandler = () => {
+      const sorted = filteredCoins.sort((a, b) => a["price_change_percentage_24h"] - b["price_change_percentage_24h"]);
+      setCoins(sorted);
+   }
+  
+   const descHandler = () => {
+      const sorted = filteredCoins.sort((a, b) => b["price_change_percentage_24h"] - a["price_change_percentage_24h"]);
+      setCoins(sorted);
+   }
+
   return (
     <div className="App">
       <Header inputChange={inputChangeHandler} />
-      <Sort />
+      <Sort ascending={ascHandler} descending={descHandler} />
       <div className="coins_wrapper">
         {filteredCoins.map((coin) => {
           return (
